@@ -1,12 +1,15 @@
-mixin button(obj={})
-	 var props = Object.assign({color: 'white'}, obj);
-			if props.i
-				.btn(class=`btn_${props.color}`)
-					.btn__i.btn__i_arrow	
-					.btn__text Hello		
-			else
-				.btn(class=`btn_${props.color}`)
-				.btn__text Hello
+mixin button(props)
+	if props.arr
+		.btn( class=((props.color ? "btn_" + props.color : "")))&attributes(attributes)
+			.btn__i.btn__i_arrow
+				block
+			.btn__text Back
+	else
+		.btn(class=((props.color ? "btn_" + props.color : "")))&attributes(attributes)
+			.btn__text add
+				block
 			
+		
+				
 		
 		

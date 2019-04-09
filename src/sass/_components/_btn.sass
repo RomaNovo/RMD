@@ -1,8 +1,10 @@
 .btn 
     color: $white
     cursor: pointer
+    transition: all .5s
     &_
         &white
+            padding: 6px 16px 8px 14px
             display: flex
             align-items: center
             color: #3C52C9
@@ -14,7 +16,10 @@
             box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.110479)
             border-radius: 3px
             border: 1px solid #3C52C9
+            &:hover
+                background: darken($white,5%)
         &blue 
+            padding: 5px 0
             font: bold 18px $main
             color: $white
             background-color:  #3D61FF
@@ -24,16 +29,25 @@
             text-align: center
             letter-spacing: 0.168px
             text-transform: uppercase
+            &:hover
+                background-color: $white
+                color: #3D61FF
         &i 
           margin-right: 5px
-    &__i
-        display: inline-block
-        font-style: normal
-        position: relative
-        top: -.7px
-        &_arrow 
-            width: 5px
-            height: 5px
-            border-right: .8px solid #3C52C9
-            border-top: .8px solid #3C52C9
-            transform: rotate(-135deg)
+    &__
+        &i
+            display: inline-block
+            font-style: normal
+            position: relative
+            vertical-align: middle
+            top: -.1px
+            left: -2px
+            &_arrow 
+                width: 6px
+                height: 6px
+                border-right: .8px solid #3C52C9
+                border-top: .8px solid #3C52C9
+                transform: rotate(-135deg)
+        &text
+            display: inline-block
+            vertical-align: middle
