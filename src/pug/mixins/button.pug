@@ -1,15 +1,12 @@
 mixin button(obj={})
-	-let props = Object.assign({color: 'white', size: 'small', cond: false}, obj);
-	#button
-		if props.cond
-			.button(class=`button_${props.color} button_${props.size}`)&attributes(attributes)
-				.button__text
-					block
-		else
-			.button(class='gameover')
-				.button__i
-					i.i.i_arrow(title="arrow icon")
-					.button__text
-					block
+	 var props = Object.assign({color: 'white'}, obj);
+			if props.i
+				.btn(class=`btn_${props.color}`)
+					.btn__i.btn__i_arrow	
+					.btn__text Hello		
+			else
+				.btn(class=`btn_${props.color}`)
+				.btn__text Hello
+			
 		
 		
