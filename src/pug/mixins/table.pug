@@ -1,0 +1,24 @@
+mixin row(data)
+    each item in data
+      if item.status
+        .row__block(class=item.cl)
+          if item.status == 'Disconnected'
+            .row__status.status.status_danger
+              .status__text Disconnected
+          else
+            .row__status.status
+              .status__text Connected
+      else if item.action
+        .row__block(class=item.cl)
+          .row__action.action
+            .action__block
+              span.action__block--item
+              span.action__block--item
+              span.action__block--item
+            img.action__i(src="images/action1.svg")
+      else
+        .row__block(class=item.cl)= item.title
+
+      
+
+      

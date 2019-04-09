@@ -1,0 +1,86 @@
+include pug/mixins/index
+
+doctype html
+html(lang=lang)
+	head
+		meta(charset='utf-8')
+		meta(name='keywords')
+		meta(name='description')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		link(rel='stylesheet' href='css/main.css')
+	body
+		section.main
+			.container
+				.main__wrapper
+					.main__aside.aside
+						.aside__wrapper
+							.aside__header
+								.aside__logo.logo
+									-let url = "https://rademade.com/"
+									a.logo__link(href= url)
+										img.logo__img(src="images/logo.svg" alt="logo")
+								a.aside__title(href= url) CRM
+							.aside__nav.nav
+								- var items= [{title:'Application', sublevel: 'gogo'}, {title:'Documentation'}, {title:'Settings'} , 	{title:'Support'}, {title:'Log out'}]
+								+list(items)
+					.main__content.content
+						.content__header
+							.content__btn.btn.btn_white
+								.btn__i.i
+									i.i.i_arrow(title="arrow icon")
+								p.btn__text Back
+							.content__title Administration
+						.content__search-block.search-block
+							.search-block__wrapper
+								.search-block__form
+									form.form
+										.form__field
+											input.form__input(type="text" placeholder="Search for something...")
+											img.form__i(src="images/form-i.svg" alt="")
+								.search-block__info.info
+									span.info__num 4
+									span.info__text services enregistrés
+								.search-block__btn.btn add									
+						.content__table.table
+							.table__row.row.row_header
+								+row([{title:'Title',cl:'row__block_title'},{title:'Role',cl:'row__block_role'},{title:'Service',cl:'row__block_service'},{title:'Company',cl:'row__block_company'},{title:'Status',cl:'row__block_status'},{title:'Date',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'super_admin',cl:'row__block_role'},{title:'Production',cl:'row__block_service'},{title:'Aboutgoods',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'super_admin',cl:'row__block_role'},{title:'Production',cl:'row__block_service'},{title:'Aboutgoods',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'user',cl:'row__block_role'},{title:'Production',cl:'row__block_service'},{title:'Charal',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'admin',cl:'row__block_role'},{title:'Sales',cl:'row__block_service'},{title:'Nestle',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'admin',cl:'row__block_role'},{title:'R&D',cl:'row__block_service'},{title:'Aboutgoods',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'user',cl:'row__block_role'},{title:'Production',cl:'row__block_service'},{title:'IRi',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Disconnected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'admin',cl:'row__block_role'},{title:'Production',cl:'row__block_service'},{title:'Aboutgoods',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Connected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							.table__row.row
+								+row([{title:'Title',cl:'row__block_title'},{title:'user',cl:'row__block_role'},{title:'Sales',cl:'row__block_service'},{title:'SOGEC',cl:'row__block_company'},{title:'Status',cl:'row__block_status',status: 'Disconnected'},{title:'19/02/2018',cl:'row__block_date'},{title:'Actions',cl:'row__block_active',action: true}])
+							
+								
+                                
+						
+                        
+							
+
+
+											
+								
+
+								
+									
+
+				
+
+
+		
+	
+  	  
+		
+		
+

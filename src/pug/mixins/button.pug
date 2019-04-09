@@ -1,0 +1,15 @@
+mixin button(obj={})
+	-let props = Object.assign({color: 'white', size: 'small', cond: false}, obj);
+	#button
+		if props.cond
+			.button(class=`button_${props.color} button_${props.size}`)&attributes(attributes)
+				.button__text
+					block
+		else
+			.button(class='gameover')
+				.button__i
+					i.i.i_arrow(title="arrow icon")
+					.button__text
+					block
+		
+		
