@@ -1,5 +1,5 @@
 mixin button(props)
-	if props.arr
+	if (props.arr)
 		.btn( class=((props.color ? "btn_" + props.color : "")))&attributes(attributes)
 			.btn__i.btn__i_arrow
 				block
