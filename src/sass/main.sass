@@ -26,9 +26,10 @@
 .aside 
     &__
         &wrapper 
-            padding: 15px 0 0 20px
+            padding: 15px 0 0 10px
     
-        &header 
+        &header
+            padding-left: 10px
             display: flex
             align-items: center
     
@@ -72,30 +73,39 @@
 .nav 
     color: rgba(255, 255, 255, 0.695029)
     &_sub 
-        margin-top: 10px
-        padding-left: 15px
+        margin-top: -3px
+        padding-left: 25px
         li 
             font: bold 13px $main
             margin: 0
             padding: 0
             margin-top: 20px
+            max-width: 100px
     &__
         &list 
             font: bold 15px $main
-        &item 
+        &item
+            margin-bottom: 7px
+            padding-left: 15px 
             display:block
-            margin-bottom: 10px
-            padding: 0 0 10px 25px
             font: bold 15px $main
             line-height: 15px
             cursor: pointer
             transition: color .2s
-            &:hover 
+            
+            &:hover
                 color: $white
             &_active > ul li 
                 color: $white
             &_active 
                 color: $white
+        &text
+            padding: 0 0 10px 20px
+            max-width: 175px
+            &:hover
+                background-color: #2438AB
+                box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.110479)
+                border-radius: 4px
 .search-block 
     &__
         &wrapper 

@@ -2,10 +2,13 @@ mixin list(data)
 	ul.nav
 		each item in data
 			if item.sublevel
-				li.nav__item.nav__item_active= item.title
+				li.nav__item.nav__item_active
+					p.nav__text= item.title
 					ul.nav.nav_sub
-						li.nav__item Nice app 1
+						li.nav__item
+							p.nav__text Nice app 1
 			else
-				li.nav__item= item.title
+				li.nav__item
+					p.nav__text= item.title
           
 			
